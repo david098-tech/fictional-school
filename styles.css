@@ -422,3 +422,67 @@ footer {
   .staff-member img { height: auto; max-width: 90%; }
   .container { flex-direction: column; gap: 2vh; }
 }
+
+/* =======================================
+   Achievements Carousel
+======================================= */
+.achievements {
+  text-align: center;
+  padding: 5vh 3vw;
+  background: #f4f8ff;
+}
+
+.achievements h2 {
+  margin-bottom: 2vh;
+  font-size: 4vw;
+  color: #004080;
+}
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+
+.carousel-track {
+  display: flex;
+  width: calc(100% * 5); /* number of items */
+  animation: scrollCarousel 20s linear infinite;
+}
+
+.carousel-item {
+  flex: 0 0 100%; /* each item takes full carousel width */
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 3vh 2vw;
+  color: #333;
+  background: white;
+  box-shadow: 0 0.4rem 0.8rem rgba(0,0,0,0.1);
+  border-radius: 1rem;
+  text-align: center;
+}
+
+/* Keyframes for sliding (responsive) */
+@keyframes scrollCarousel {
+  0%   { transform: translateX(0); }
+  20%  { transform: translateX(0); }
+  25%  { transform: translateX(-100%); }
+  45%  { transform: translateX(-100%); }
+  50%  { transform: translateX(-200%); }
+  70%  { transform: translateX(-200%); }
+  75%  { transform: translateX(-300%); }
+  95%  { transform: translateX(-300%); }
+  100% { transform: translateX(0); }
+}
+
+/* Responsive text size */
+@media (max-width: 768px) {
+  .carousel-item {
+    font-size: 3.5vw;
+    padding: 4vh 3vw;
+  }
+}
+
