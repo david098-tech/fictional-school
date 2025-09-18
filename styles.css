@@ -755,3 +755,79 @@ body, html {
   box-sizing: border-box;
 }
 
+/* Reset & prevent horizontal scroll */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Navigation styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2%;
+  background-color: #333;  /* change as needed */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1rem;
+}
+
+/* Desktop: nav links inline, burger hidden */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger div {
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Mobile: hide links, show burger */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;              /* hide by default */
+    position: absolute;
+    top: 60px;                  /* below nav */
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #333;
+    padding: 1rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;              /* show when active */
+  }
+
+  .nav-links a {
+    padding: 0.5rem 2rem;
+  }
+
+  .burger {
+    display: flex;              /* show burger on mobile */
+  }
+}
+
+
