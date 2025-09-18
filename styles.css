@@ -697,3 +697,28 @@ nav a:hover {
         display: flex;
     }
 }
+
+/* Default layout (desktop/laptop) */
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+/* Mobile layout (screens smaller than 768px) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* stack elements instead of side by side */
+    gap: 10px;
+  }
+
+  nav {
+    font-size: 14px; /* make text smaller */
+  }
+
+  img {
+    max-width: 100%; /* make images shrink to fit */
+    height: auto;
+  }
+}
+
