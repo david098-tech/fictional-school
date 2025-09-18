@@ -423,9 +423,49 @@ footer {
   .container { flex-direction: column; gap: 2vh; }
 }
 
-/* =======================================
-   Achievements Carousel
-======================================= */
+/* Principal Section */
+.principal {
+  display: flex;
+  flex-wrap: wrap; /* stack on small screens */
+  align-items: center;
+  justify-content: center;
+  gap: 3vw; /* spacing between image and quote */
+  padding: 5vh 3vw;
+}
+
+.principal img {
+  flex: 0 0 35%; /* image takes 35% of container on desktop */
+  max-width: 300px;
+  height: auto;
+  border-radius: 1rem; /* rounded edges */
+  object-fit: cover;
+}
+
+.principal blockquote {
+  flex: 0 0 55%; /* quote takes remaining width */
+  font-size: 1.2rem;
+  margin: 0;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* Mobile stacking */
+@media (max-width: 768px) {
+  .principal {
+    flex-direction: column; /* stack image above quote */
+    gap: 2vh;
+  }
+
+  .principal img,
+  .principal blockquote {
+    flex: 0 0 90%;
+    max-width: 90%;
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+
+/* Achievements Carousel */
 .achievements {
   text-align: center;
   padding: 5vh 3vw;
@@ -433,8 +473,8 @@ footer {
 }
 
 .achievements h2 {
-  margin-bottom: 2vh;
   font-size: 4vw;
+  margin-bottom: 3vh;
   color: #004080;
 }
 
@@ -449,12 +489,12 @@ footer {
 
 .carousel-track {
   display: flex;
-  width: calc(100% * 5); /* number of items */
+  width: 500%; /* 5 items */
   animation: scrollCarousel 20s linear infinite;
 }
 
 .carousel-item {
-  flex: 0 0 100%; /* each item takes full carousel width */
+  flex: 0 0 20%; /* 5 items → each takes 20% */
   font-size: 1.5rem;
   font-weight: bold;
   padding: 3vh 2vw;
@@ -465,24 +505,26 @@ footer {
   text-align: center;
 }
 
-/* Keyframes for sliding (responsive) */
+/* Animation - slides 1 item at a time */
 @keyframes scrollCarousel {
-  0%   { transform: translateX(0); }
-  20%  { transform: translateX(0); }
-  25%  { transform: translateX(-100%); }
-  45%  { transform: translateX(-100%); }
-  50%  { transform: translateX(-200%); }
-  70%  { transform: translateX(-200%); }
-  75%  { transform: translateX(-300%); }
-  95%  { transform: translateX(-300%); }
-  100% { transform: translateX(0); }
+  0%, 20% { transform: translateX(0%); }
+  25%, 45% { transform: translateX(-20%); }
+  50%, 70% { transform: translateX(-40%); }
+  75%, 95% { transform: translateX(-60%); }
+  100% { transform: translateX(0%); }
 }
 
-/* Responsive text size */
+/* Mobile - show 1 item at a time */
 @media (max-width: 768px) {
+  .carousel-track {
+    width: 500%; /* keep same total width */
+  }
   .carousel-item {
+    flex: 0 0 100%; /* each item takes full carousel width */
     font-size: 3.5vw;
     padding: 4vh 3vw;
   }
 }
+
+
 
