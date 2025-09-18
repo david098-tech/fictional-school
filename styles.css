@@ -121,7 +121,9 @@ nav {
 /* =========================
    VALUES SECTION
 ========================= */
-/* VALUES SECTION - hover reveal effect */
+/* =========================
+   VALUES SECTION
+========================= */
 .values {
   display: flex;
   flex-direction: column;
@@ -136,20 +138,15 @@ nav {
   font-weight: bold;
   cursor: pointer;
   overflow: visible;
-  opacity: 0;               /* hidden by default */
-  transform: translateX(-100px);
-  transition: all 0.8s ease;
 }
 
-.value.right {
-  transform: translateX(100px);
-}
-
+/* The main word is always visible */
 .value-title {
   display: inline-block;
   transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
+/* The description is hidden initially */
 .value-desc {
   display: block;
   opacity: 0;
@@ -157,6 +154,11 @@ nav {
   font-size: 0.7em;
   text-align: center;
   transition: opacity 0.5s;
+}
+
+/* Right-aligned items slide in the opposite direction */
+.value.right .value-title {
+  transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
 /* Hover animations */
@@ -173,15 +175,6 @@ nav {
   transition-delay: 0.2s;
 }
 
-/* Optional: make them appear on scroll too (if you want) */
-.values .value {
-  opacity: 0;
-}
-
-.values .value.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
 
 /* =========================
    PRINCIPAL SECTION
@@ -409,4 +402,5 @@ footer {
   .staff-member img { height: 200px; }
   .gallery-left img, .gallery-right img { width: 90%; height: auto; }
 }
+
 
