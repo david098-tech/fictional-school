@@ -436,6 +436,7 @@ a {
 /* ============================= */
 /* Footer Social Icons */
 /* ============================= */
+/* Footer Social Icons */
 .social-icons {
     margin-top: 15px;
     display: flex;
@@ -451,10 +452,10 @@ a {
     height: 40px;
     background-color: white; /* Base circle color */
     border-radius: 50%;
-    color: inherit; /* Default icon color (black or inherited) */
+    color: #004080;          /* Default icon color */
     text-decoration: none;
-    transition: transform 0.3s, background-color 0.3s, color 0.3s;
     font-size: 18px;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
 }
 
 /* Hover effects with brand colors */
@@ -481,6 +482,7 @@ a {
     color: white;
     transform: scale(1.2);
 }
+
 /* ============================= */
 /* Responsive Adjustments */
 /* ============================= */
@@ -505,5 +507,6 @@ a {
   nav { font-size: 0.9rem; }
   img { max-width: 100%; height: auto; }
 }
+
 
 
