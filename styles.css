@@ -3,13 +3,6 @@
 body { font-family: 'Arial', sans-serif; line-height:1.6; color:#333; scroll-behavior:smooth; }
 a { text-decoration:none; color:inherit; }
 
-/* Navigation */
-nav {
-    display:flex; justify-content:center; background:#004080; flex-wrap:wrap;
-}
-nav a { color:white; padding:15px 25px; font-weight:bold; }
-nav a:hover { background:#0066cc; }
-
 /* Hero Section */
 .hero {
     position:relative;
@@ -667,36 +660,6 @@ nav a:hover {
     border-radius: 2px;
 }
 
-/* Mobile */
-@media(max-width:768px){
-    nav {
-        justify-content: space-between; /* space between links & burger */
-        padding: 10px 20px;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background: #004080;
-        position: absolute;
-        top: 60px; /* below nav bar */
-        left: 0;
-    }
-
-    .nav-links a {
-        padding: 15px;
-        text-align: center;
-    }
-
-    .burger {
-        display: flex;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-}
 
 /* Default layout (desktop/laptop) */
 .container {
@@ -767,42 +730,6 @@ body, html {
   overflow-x: hidden;
 }
 
-/* Navigation styles */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2%;
-  background-color: #333;  /* change as needed */
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 1rem;
-  font-size: 1rem;
-}
-
-/* Desktop: nav links inline, burger hidden */
-.nav-links {
-  display: flex;
-  gap: 2rem;
-}
-
-.burger {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 25px;
-  height: 20px;
-  cursor: pointer;
-}
-
-.burger div {
-  height: 3px;
-  background-color: white;
-  border-radius: 2px;
-}
 
 /* Mobile: hide links, show burger */
 @media (max-width: 768px) {
@@ -855,27 +782,6 @@ nav {
   text-decoration: none;
   margin: 0 1rem;
   font-size: 1rem;
-}
-
-/* Desktop view */
-.nav-links {
-  display: flex;
-  gap: 2rem;
-}
-
-.burger {
-  display: none; /* hide on desktop */
-  flex-direction: column;
-  justify-content: space-between;
-  width: 25px;
-  height: 20px;
-  cursor: pointer;
-}
-
-.burger div {
-  height: 3px;
-  background-color: white;
-  border-radius: 2px;
 }
 
 /* Mobile view */
