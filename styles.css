@@ -232,74 +232,6 @@ footer { background:#004080; color:white; text-align:center; padding:20px; margi
     gap: 15px;
 }
 
-.icon {
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    border-radius: 50%;
-    background-color: white;
-    position: relative;
-    transition: transform 0.3s, background-color 0.3s;
-    text-decoration: none;
-}
-
-/* Hover effect */
-.icon:hover {
-    transform: scale(1.2);
-}
-
-/* Individual icons using CSS shapes/letters */
-.icon.facebook::before {
-    content: "f";
-    font-weight: bold;
-    color: #1877f2;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: Arial, sans-serif;
-}
-
-.icon.twitter::before {
-    content: "t";
-    font-weight: bold;
-    color: #1da1f2;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: Arial, sans-serif;
-}
-
-.icon.instagram::before {
-    content: "i";
-    font-weight: bold;
-    color: #e4405f;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: Arial, sans-serif;
-}
-
-.icon.linkedin::before {
-    content: "in";
-    font-weight: bold;
-    color: #0a66c2;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: Arial, sans-serif;
-}
-/* Footer social icons */
-.social-icons {
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
 .social-icons a {
     display: flex;
     align-items: center;
@@ -338,19 +270,7 @@ footer { background:#004080; color:white; text-align:center; padding:20px; margi
     color: white;
     transform: scale(1.2);
 }
-.social-icons a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: white; /* Circle background */
-    border-radius: 50%;
-    color: #004080; /* Default icon color, visible on light backgrounds */
-    text-decoration: none;
-    transition: transform 0.3s, background-color 0.3s, color 0.3s;
-    font-size: 18px;
-}
+
 /* Values Section */
 .values {
     display: flex;
@@ -809,3 +729,4 @@ nav {
     display: flex; /* show burger icon */
   }
 }
+
