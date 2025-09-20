@@ -1,3 +1,6 @@
+// ========================
+// Values Section Animation
+// ========================
 const values = document.querySelectorAll('.value');
 
 function checkValues() {
@@ -17,19 +20,23 @@ function checkValues() {
 
 window.addEventListener('scroll', checkValues);
 window.addEventListener('load', checkValues);
+
+// ========================
+// Gallery Image Intersection Observer
+// ========================
 document.addEventListener("DOMContentLoaded", () => {
-  const galleryImages = document.querySelectorAll(".gallery-img");
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  }, { threshold: 0.3 });
-
-  galleryImages.forEach(img => observer.observe(img));
+    const galleryImages = document.querySelectorAll(".gallery-img");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add("show");
+        });
+    }, { threshold: 0.3 });
+    galleryImages.forEach(img => observer.observe(img));
 });
+
+// ========================
+// Burger Menu Toggle
+// ========================
 const burger = document.getElementById("burger");
 const navLinks = document.getElementById("navLinks");
 
