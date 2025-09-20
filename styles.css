@@ -15,19 +15,6 @@ a { text-decoration:none; color:inherit; }
     font-size:3em; text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
 }
 
-/* Values Section */
-.values {
-    display:flex; flex-direction:column; align-items:center;
-    padding:50px 20px;
-}
-.value {
-    opacity:0;
-    transform: translateX(-100px);
-    transition: all 0.8s ease;
-    font-size:1.5em; margin:20px 0; text-align:center;
-}
-.value.right { transform: translateX(100px); }
-
 /* Image Sections */
 .section-image {
     width:100%; max-width:1200px; margin:50px auto; border-radius:10px;
@@ -729,4 +716,5 @@ nav {
     display: flex; /* show burger icon */
   }
 }
+
 
