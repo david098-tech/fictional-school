@@ -31,11 +31,8 @@ nav {
   padding: 1rem 2%;
   background-color: #004080;
   flex-wrap: wrap;
-  position: relative; /* ensures absolute children position correctly */
-  z-index: 100;       /* nav sits above other content */
 }
 
-/* Desktop nav links */
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -45,17 +42,16 @@ nav {
   color: white;
   padding: 15px 25px;
   font-weight: bold;
-  border-radius: 5px;
   transition: background 0.3s;
+  border-radius: 5px;
 }
 
 .nav-links a:hover {
   background: #0066cc;
 }
 
-/* Burger menu */
 .burger {
-  display: none; /* hidden on desktop */
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 25px;
@@ -71,11 +67,10 @@ nav {
 
 /* Mobile Navigation */
 @media (max-width: 768px) {
-  /* Hide links by default */
   .nav-links {
     display: none;
     position: absolute;
-    top: 60px; /* below nav */
+    top: 60px;
     left: 0;
     width: 100%;
     flex-direction: column;
@@ -83,7 +78,6 @@ nav {
     padding: 1rem 0;
   }
 
-  /* Show links when active */
   .nav-links.active {
     display: flex;
   }
@@ -93,11 +87,11 @@ nav {
     text-align: center;
   }
 
-  /* Show burger menu on mobile */
   .burger {
     display: flex;
   }
 }
+
 
 /* ===========================
    Hero Section
@@ -603,4 +597,5 @@ footer {
 .social-icons a.twitter:hover { background-color: #1da1f2; color: white; transform: scale(1.2); }
 .social-icons a.instagram:hover { background-color: #e4405f; color: white; transform: scale(1.2); }
 .social-icons a.linkedin:hover { background-color: #0a66c2; color: white; transform: scale(1.2); }
+
 
