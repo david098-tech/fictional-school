@@ -92,7 +92,6 @@ nav {
   }
 }
 
-
 /* ===========================
    Hero Section
 =========================== */
@@ -597,5 +596,3 @@ footer {
 .social-icons a.twitter:hover { background-color: #1da1f2; color: white; transform: scale(1.2); }
 .social-icons a.instagram:hover { background-color: #e4405f; color: white; transform: scale(1.2); }
 .social-icons a.linkedin:hover { background-color: #0a66c2; color: white; transform: scale(1.2); }
-
-
